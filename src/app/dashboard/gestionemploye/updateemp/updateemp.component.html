@@ -1,0 +1,20 @@
+<div class="container mt-5">
+    <h1>edit employee</h1>
+    <div class="row ">
+        <div class="col-lg-6 mx-auto  ">
+
+            <input [(ngModel)]="employee.name" type="text" placeholder="name" class="form-control m-2">
+            <input [(ngModel)]="employee.email" type="text" placeholder="email" class="form-control m-2">
+            <input [(ngModel)]="employee.tel" type="text" placeholder="tel" class="form-control m-2">
+            <input [(ngModel)]="employee.adresse" type="text" placeholder="adresse" class="form-control m-2">
+            <input (change)="selectImage($event)" type="file" placeholder="image" class="form-control m-2">
+
+            <select [(ngModel)]="employee.idDep" class="form-select m-2">
+                <option *ngFor="let item of departement" [value]="item._id">{{item.name}}</option>
+            
+            </select>
+
+            <button (click)="update()" class="btn btn-dark m-2 form-control"> save</button>
+        </div>
+    </div>
+</div>

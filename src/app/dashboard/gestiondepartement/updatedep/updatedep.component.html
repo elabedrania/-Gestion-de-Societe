@@ -1,0 +1,16 @@
+<div class="container mt-5">
+
+    <h1>edit departement</h1>
+
+    <div class="row">
+
+        <div class="col-lg-6 mx-auto">
+            <input [(ngModel)]="departement.name" type="text" placeholder="name" class="form-control m-2">
+            <input [(ngModel)]="departement.description" type="text" placeholder="description" class="form-control m-2">
+            <input [(ngModel)]="departement.salle" type="text" placeholder="salle" class="form-control m-2">
+            <input [(ngModel)]="departement.etage" type="text" placeholder="etage" class="form-control m-2">
+
+            <button (click)="update()"  class="btn btn-dark m-2 form-control"> save</button>
+        </div>
+    </div>
+</div>
